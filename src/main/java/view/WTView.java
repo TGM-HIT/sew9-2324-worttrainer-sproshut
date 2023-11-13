@@ -1,4 +1,10 @@
 package view;
 
-public class WTView {
+import controller.WTControl;
+
+import javax.swing.*;
+
+public class WTView extends JPanel {
+    public WTView(WTControl wtControl) {
+    }
 }
