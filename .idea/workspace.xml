@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Defined project structure">
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Minimal runnable code">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/WTModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/WTView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WTView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/WTWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WTWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +47,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.23793103"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.23793103",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RunManager">
@@ -97,12 +96,20 @@
       <option name="project" value="LOCAL" />
       <updated>1699881117771</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Minimal runnable code">
+      <created>1699882117720</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699882117720</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Defined project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Defined project structure" />
+    <MESSAGE value="Minimal runnable code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minimal runnable code" />
   </component>
 </project>
