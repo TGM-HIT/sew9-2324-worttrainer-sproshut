@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class WTInOut {
     private static final String FILENAME = "worttrainer.json";
-    private WTList list;
+    private final WTList list;
 
     public WTInOut(WTList list) {
         this.list = list;

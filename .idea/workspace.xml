@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Basic word entry structure">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Implemented basic logic&#10;&#10;- Cyclic word list&#10;- Saving / loading word list using GSON&#10;- Basic statistics&#10;- Loading web image">
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/WTView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WTView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -171,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702981849069</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented basic logic&#10;&#10;- Cyclic word list&#10;- Saving / loading word list using GSON&#10;- Basic statistics&#10;- Loading web image">
+      <option name="closed" value="true" />
+      <created>1702982450664</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702982450664</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +197,7 @@
     <MESSAGE value="UI and minimal functionality" />
     <MESSAGE value="Added custom exceptions" />
     <MESSAGE value="Basic word entry structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic word entry structure" />
+    <MESSAGE value="Implemented basic logic&#10;&#10;- Cyclic word list&#10;- Saving / loading word list using GSON&#10;- Basic statistics&#10;- Loading web image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic logic&#10;&#10;- Cyclic word list&#10;- Saving / loading word list using GSON&#10;- Basic statistics&#10;- Loading web image" />
   </component>
 </project>

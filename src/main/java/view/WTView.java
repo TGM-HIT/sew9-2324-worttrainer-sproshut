@@ -80,6 +80,14 @@ public class WTView extends JPanel {
         resetTotal.setActionCommand("reset_total");
         resetTotal.setFont(bold);
         this.add(resetTotal, gbc);
+
+        loadComplete(false);
+    }
+
+    public void loadComplete(boolean b) {
+        for (Component cp : getComponents() ){
+            if (cp instanceof JButton || cp instanceof JTextField) cp.setEnabled(b);
+        }
     }
 
     public void setTotal(int i) {
@@ -108,5 +116,18 @@ public class WTView extends JPanel {
 
     public void showError(String message) {
         JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void toggleReset() {
+        resetCorrect.setEnabled(!resetCorrect.isEnabled());
+        resetTotal.setEnabled(!resetTotal.isEnabled());
+    }
+
+    public void toggleInput() {
+        answer.setEnabled(!answer.isEnabled());
+    }
+
+    public void setImage(Image image) {
+        lImage.setIcon(image != null ? new ImageIcon(image) : null);
     }
 }

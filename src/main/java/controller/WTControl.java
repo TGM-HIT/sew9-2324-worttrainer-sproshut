@@ -1,17 +1,22 @@
 package controller;
 
+import model.WTEntry;
 import model.WTModel;
+import model.exceptions.WTIOException;
 import view.WTView;
 import view.WTWindow;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.net.URL;
 
 public class WTControl implements WindowListener, ActionListener {
-    private WTView view;
-    private WTModel model;
+    private final WTView view;
+    private final WTModel model;
 
     public WTControl(){
         view = new WTView(this);
@@ -37,30 +42,60 @@ public class WTControl implements WindowListener, ActionListener {
                 break;
             case "enter":
                 String answer = view.getAnswer().replace(" ", "");
-                if (answer.equals("")) {
+                if (answer.isEmpty()) {
                     view.showError("Empty answer");
                     return;
                 }
-                if (model.checkAnswer(answer)) view.setCorrect(view.getCorrect() + 1);
-                view.setTotal(view.getTotal() + 1);
-                // updateImage(model.next().getURL());
+                if (model.checkAnswer(answer)){
+                    model.increaseCorrect();
+                    view.setCorrect(model.getCorrect());
+                }
+                model.increaseAsked();
+                view.setTotal(model.getAsked());
+                updateImage(model.nextEntry().getURL());
                 view.resetAnswer();
                 break;
         }
     }
 
-    public void updateImage(String url) {
-        // TODO
+    private void updateImage(String url) {
+        URL url_obj = model.getUrlObj(url);
+        if (url_obj != null) {
+            view.toggleReset();
+            view.toggleInput();
+            view.setImage(null);
+            Thread t = new Thread(() -> {
+                Image img = model.getImage(url_obj);
+                SwingUtilities.invokeLater(() -> {
+                    view.setImage(img);
+                    view.toggleInput();
+                    view.toggleReset();
+                });
+            });
+            t.start();
+        }
     }
 
     @Override
     public void windowOpened(WindowEvent windowEvent) {
-        // TODO: Load all data
+        try {
+            model.loadWordList();
+        } catch (WTIOException e) {
+            view.showError(e.getMessage());
+            return;
+        }
+        view.loadComplete(true);
+        WTEntry entry = model.nextEntry();
+        if (entry != null) updateImage(entry.getURL());
     }
 
     @Override
     public void windowClosing(WindowEvent windowEvent) {
-        // TODO: Save all data
+        try {
+            model.saveWordList();
+        } catch (WTIOException e) {
+            view.showError(e.getMessage());
+        }
     }
 
     @Override

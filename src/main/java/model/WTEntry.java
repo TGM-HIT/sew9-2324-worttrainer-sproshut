@@ -3,7 +3,6 @@ package model;
 import model.exceptions.InvalidURLException;
 import model.exceptions.InvalidWordException;
 
-import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
