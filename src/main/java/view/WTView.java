@@ -9,11 +9,12 @@ public class WTView extends JPanel {
     private final JTextField answer;
     private final JLabel lImage, correct, total;
     private final JButton resetCorrect, resetTotal;
-    private final Font italic = new Font(Font.SANS_SERIF, Font.ITALIC, 16);
-    private final Font bold = new Font(Font.SANS_SERIF, Font.BOLD, 16);
-    private final Font normal = new Font(Font.SANS_SERIF, Font.PLAIN, 16);
 
     public WTView(WTControl wtControl) {
+        Font italic = new Font(Font.SANS_SERIF, Font.ITALIC, 16);
+        Font bold = new Font(Font.SANS_SERIF, Font.BOLD, 16);
+        Font normal = new Font(Font.SANS_SERIF, Font.PLAIN, 16);
+
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -94,16 +95,8 @@ public class WTView extends JPanel {
         total.setText(Integer.toString(i));
     }
 
-    public int getTotal() {
-        return Integer.parseInt(total.getText());
-    }
-
     public void setCorrect(int i) {
         correct.setText(Integer.toString(i));
-    }
-
-    public int getCorrect() {
-        return Integer.parseInt(correct.getText());
     }
 
     public String getAnswer() {
