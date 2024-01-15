@@ -125,4 +125,13 @@ public class WTModel {
     public void saveWordList() throws WTIOException {
         inOut.saveWordList();
     }
+
+    /**
+     * Add word entry
+     * @param word Word
+     * @param url Image URL
+     */
+    public void addWordEntry(String word, String url) {
+        entryList.addEntry(new WTEntry(word, url));
+    }
 }

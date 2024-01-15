@@ -15,13 +15,11 @@ public interface WTBaseIO {
 
     /**
      * Save word list
-     * @throws WTIOException
      */
     void saveWordList() throws WTIOException;
 
     /**
      * Load word list
-     * @throws WTIOException
      */
     void loadWordList() throws WTIOException;
 }

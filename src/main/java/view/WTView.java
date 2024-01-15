@@ -4,11 +4,12 @@ import controller.WTControl;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class WTView extends JPanel {
     private final JTextField answer;
     private final JLabel lImage, correct, total;
-    private final JButton resetCorrect, resetTotal;
+    private final JButton resetCorrect, resetTotal, addEntry;
 
     public WTView(WTControl wtControl) {
         Font italic = new Font(Font.SANS_SERIF, Font.ITALIC, 16);
@@ -82,6 +83,15 @@ public class WTView extends JPanel {
         resetTotal.setFont(bold);
         this.add(resetTotal, gbc);
 
+        gbc.gridy = 5;
+        gbc.gridx = 0;
+        gbc.gridwidth = 3;
+        addEntry = new JButton("Wortpaar hinzufügen");
+        addEntry.addActionListener(wtControl);
+        addEntry.setActionCommand("add_entry");
+        addEntry.setFont(bold);
+        this.add(addEntry, gbc);
+
         loadComplete(false);
     }
 
@@ -139,6 +149,31 @@ public class WTView extends JPanel {
     public void toggleReset() {
         resetCorrect.setEnabled(!resetCorrect.isEnabled());
         resetTotal.setEnabled(!resetTotal.isEnabled());
+    }
+
+    /**
+     * Ask for a word and URL to add
+     * @return Word and URL, or null if empty
+     */
+    public ArrayList<String> promptWordEntry() {
+        ArrayList<String> result = new ArrayList<>();
+        JTextField wort = new JTextField();
+        JTextField url = new JTextField();
+        Object[] message = {
+                "Wort:", wort,
+                "Bild-URL:", url
+        };
+        int option = JOptionPane.showConfirmDialog(null, message, "Wortpaar hinzufügen", JOptionPane.OK_CANCEL_OPTION);
+        if (option == JOptionPane.OK_OPTION) {
+            if (wort.getText().isEmpty() || url.getText().isEmpty()) {
+                result = null;
+            }
+            else {
+                result.add(wort.getText());
+                result.add(url.getText());
+            }
+        }
+        return result;
     }
 
     /**

@@ -3,6 +3,8 @@ package controller;
 import model.WTEntry;
 import model.WTInOutGSON;
 import model.WTModel;
+import model.exceptions.InvalidURLException;
+import model.exceptions.InvalidWordException;
 import model.exceptions.WTIOException;
 import view.WTView;
 import view.WTWindow;
@@ -14,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class WTControl implements WindowListener, ActionListener {
     private final WTView view;
@@ -44,6 +47,15 @@ public class WTControl implements WindowListener, ActionListener {
             case "reset_correct":   // Reset correct statistic
                 view.setCorrect(0);
                 model.resetCorrect();
+                break;
+            case "add_entry":   // Add word entry
+                ArrayList<String> entry = view.promptWordEntry();
+                if (entry == null) return;
+                try {
+                    model.addWordEntry(entry.get(0), entry.get(1));
+                } catch (InvalidURLException | InvalidWordException ex) {
+                    view.showError(ex.getMessage());
+                }
                 break;
             case "enter":   // Check answer
                 String answer = view.getAnswer().replace(" ", "");
