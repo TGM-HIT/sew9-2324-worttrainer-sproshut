@@ -8,10 +8,11 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class WTInOut implements WTBaseIO {
+public class WTInOutGSON implements WTBaseIO {
     private static final String FILENAME = "worttrainer.json";  // Output file
     private WTList list;
 
+    @Override
     public void setWordList(WTList list) {
         this.list = list;
     }
@@ -20,6 +21,7 @@ public class WTInOut implements WTBaseIO {
      * Saves the word list to a JSON file
      * @throws WTIOException if an error occurs while saving the file
      */
+    @Override
     public void saveWordList() throws WTIOException {
         Gson gson = new Gson();
         String json = gson.toJson(list.getEntryList());
@@ -35,6 +37,7 @@ public class WTInOut implements WTBaseIO {
      * Loads the word list from a JSON file
      * @throws WTIOException if an error occurs while loading the file
      */
+    @Override
     public void loadWordList() throws WTIOException {
         if (!new File(FILENAME).isFile()) return;
 

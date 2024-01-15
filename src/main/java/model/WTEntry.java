@@ -86,4 +86,9 @@ public class WTEntry {
     public boolean isCorrect() {
         return isCorrect;
     }
+
+    @Override
+    public String toString() {
+        return word + "|" + url;
+    }
 }

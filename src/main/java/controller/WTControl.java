@@ -1,7 +1,7 @@
 package controller;
 
 import model.WTEntry;
-import model.WTInOut;
+import model.WTInOutGSON;
 import model.WTModel;
 import model.exceptions.WTIOException;
 import view.WTView;
@@ -21,7 +21,7 @@ public class WTControl implements WindowListener, ActionListener {
 
     public WTControl(){
         view = new WTView(this);
-        model = new WTModel(new WTInOut());
+        model = new WTModel(new WTInOutGSON());
         new WTWindow(view, this);
     }
 
