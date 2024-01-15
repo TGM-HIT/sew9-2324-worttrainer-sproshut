@@ -85,41 +85,73 @@ public class WTView extends JPanel {
         loadComplete(false);
     }
 
+    /**
+     * Enable/disable buttons and text fields when window loaded
+     * @param b Enable/disable
+     */
     public void loadComplete(boolean b) {
         for (Component cp : getComponents() ){
             if (cp instanceof JButton || cp instanceof JTextField) cp.setEnabled(b);
         }
     }
 
+    /**
+     * Set total score
+     * @param i total score
+     */
     public void setTotal(int i) {
         total.setText(Integer.toString(i));
     }
 
+    /**
+     * Set correct score
+     * @param i correct score
+     */
     public void setCorrect(int i) {
         correct.setText(Integer.toString(i));
     }
 
+    /**
+     * @return Answer
+     */
     public String getAnswer() {
         return answer.getText();
     }
 
+    /**
+     * Reset answer field
+     */
     public void resetAnswer() {
         answer.setText("");
     }
 
+    /**
+     * Show error message
+     * @param message Error message
+     */
     public void showError(String message) {
         JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
 
+    /**
+     * Enable/disable score reset buttons
+     */
     public void toggleReset() {
         resetCorrect.setEnabled(!resetCorrect.isEnabled());
         resetTotal.setEnabled(!resetTotal.isEnabled());
     }
 
+    /**
+     * Enable/disable answer field
+     */
     public void toggleInput() {
         answer.setEnabled(!answer.isEnabled());
     }
 
+    /**
+     * Set image
+     * @param image Image
+     */
     public void setImage(Image image) {
         lImage.setIcon(image != null ? new ImageIcon(image) : null);
     }

@@ -1,6 +1,9 @@
 package model.exceptions;
 
-public class WTIOException extends Exception {
+/**
+ * Custom IOException
+ */
+public class WTIOException extends RuntimeException {
     public WTIOException(String message) {
         super(message);
     }

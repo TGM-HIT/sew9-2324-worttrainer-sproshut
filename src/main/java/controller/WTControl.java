@@ -28,19 +28,23 @@ public class WTControl implements WindowListener, ActionListener {
         new WTControl();
     }
 
+    /**
+     * Handles all button clicks
+     * @param e Button event
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         String cmd = e.getActionCommand();
         switch (cmd) {
-            case "reset_total":
+            case "reset_total": // Reset asked statistic
                 view.setTotal(0);
                 model.resetTotal();
                 break;
-            case "reset_correct":
+            case "reset_correct":   // Reset correct statistic
                 view.setCorrect(0);
                 model.resetCorrect();
                 break;
-            case "enter":
+            case "enter":   // Check answer
                 String answer = view.getAnswer().replace(" ", "");
                 if (answer.isEmpty()) {
                     view.showError("Empty answer");
@@ -58,13 +62,17 @@ public class WTControl implements WindowListener, ActionListener {
         }
     }
 
+    /**
+     * Updates image box
+     * @param url URL of image
+     */
     private void updateImage(String url) {
         URL url_obj = model.getUrlObj(url);
         if (url_obj != null) {
             view.toggleReset();
             view.toggleInput();
             view.setImage(null);
-            Thread t = new Thread(() -> {
+            Thread t = new Thread(() -> {   // Perform load and update in separate thread
                 Image img = model.getImage(url_obj);
                 SwingUtilities.invokeLater(() -> {
                     view.setImage(img);
@@ -76,6 +84,10 @@ public class WTControl implements WindowListener, ActionListener {
         }
     }
 
+    /**
+     * Load word list on window open
+     * @param windowEvent Window event
+     */
     @Override
     public void windowOpened(WindowEvent windowEvent) {
         try {
@@ -89,6 +101,10 @@ public class WTControl implements WindowListener, ActionListener {
         if (entry != null) updateImage(entry.getURL());
     }
 
+    /**
+     * Save word list on window close
+     * @param windowEvent Window event
+     */
     @Override
     public void windowClosing(WindowEvent windowEvent) {
         try {

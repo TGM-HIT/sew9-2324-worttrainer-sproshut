@@ -11,16 +11,25 @@ public class WTList {
         entryList = new ArrayList<>();
     }
 
+    /**
+     * Move to the next index or return to 0 if end reached
+     */
     public void moveNext() {
         if (index >= entryList.size() - 1) index = 0;
         else index++;
     }
 
+    /**
+     * @return Entry on current index
+     */
     public WTEntry currentEntry() {
         if (entryList.isEmpty()) return null;
         return entryList.get(index);
     }
 
+    /**
+     * @param entry Entry to add
+     */
     public void addEntry(WTEntry entry) {
         entryList.add(entry);
     }

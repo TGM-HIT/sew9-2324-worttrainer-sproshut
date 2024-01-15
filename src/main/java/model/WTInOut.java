@@ -8,13 +8,17 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class WTInOut {
-    private static final String FILENAME = "worttrainer.json";
+    private static final String FILENAME = "worttrainer.json";  // Output file
     private final WTList list;
 
     public WTInOut(WTList list) {
         this.list = list;
     }
 
+    /**
+     * Saves the word list to a JSON file
+     * @throws WTIOException if an error occurs while saving the file
+     */
     public void saveWordList() throws WTIOException {
         Gson gson = new Gson();
         String json = gson.toJson(list.getEntryList());
@@ -26,6 +30,10 @@ public class WTInOut {
         }
     }
 
+    /**
+     * Loads the word list from a JSON file
+     * @throws WTIOException if an error occurs while loading the file
+     */
     public void loadWordList() throws WTIOException {
         if (!new File(FILENAME).isFile()) return;
 
