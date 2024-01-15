@@ -53,7 +53,7 @@ public class WTEntry {
      * @param url Image URL
      */
     public void setURL(String url) {
-        if(checkURL(url)) throw new InvalidURLException("Invalid URL. Make sure not to use subdomains and add picture path (png, jpg, jpeg) at the end");
+        if(!checkURL(url)) throw new InvalidURLException("Invalid URL. Make sure not to use subdomains and add picture path (png, jpg, jpeg) at the end");
         this.url = url;
     }
 

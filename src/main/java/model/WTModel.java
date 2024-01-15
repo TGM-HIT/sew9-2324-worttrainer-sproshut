@@ -111,6 +111,12 @@ public class WTModel {
      */
     public void loadWordList() throws WTIOException {
         inOut.loadWordList();
+        if (entryList.getEntryList().isEmpty()) {
+            entryList.addEntry(new WTEntry("Hund", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg"));
+            entryList.addEntry(new WTEntry("Cat", "https://www.wien.info/resource/image/295704/19x10/1200/630/a1a79e07fd1d150d06059b4feca64844/Sn/city-airport-train-cat-1-.jpg"));
+            entryList.addEntry(new WTEntry("Flugzeug", "https://upload.wikimedia.org/wikipedia/commons/c/c8/Cessna172-CatalinaTakeOff.JPG"));
+            entryList.addEntry(new WTEntry("Bus", "https://flotte.at/NewsImages-870x598/pic1642_1-wiener-linien-setzen-auf-saubere-busse.jpg"));
+        }
     }
 
     /**

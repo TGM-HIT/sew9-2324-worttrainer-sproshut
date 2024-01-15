@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Implemented strategy pattern for IO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/WTInOutTXT.java" afterDir="false" />
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Added TXT saving option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTInOutGSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705322746637</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added TXT saving option">
+      <option name="closed" value="true" />
+      <created>1705324097604</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705324097604</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +243,7 @@
     <MESSAGE value="Minor refactoring to fix warnings&#10;&#10;- Made fonts local variables" />
     <MESSAGE value="Added comments" />
     <MESSAGE value="Implemented strategy pattern for IO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented strategy pattern for IO" />
+    <MESSAGE value="Added TXT saving option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TXT saving option" />
   </component>
 </project>
