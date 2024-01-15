@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Minor refactoring to fix warnings&#10;&#10;- Made fonts local variables">
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Added comments">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/base/WTBaseIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTInOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/WTModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/exceptions/InvalidURLException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/exceptions/InvalidURLException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/exceptions/InvalidWordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/exceptions/InvalidWordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/exceptions/WTIOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/exceptions/WTIOException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/WTView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WTView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -200,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702982692044</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added comments">
+      <option name="closed" value="true" />
+      <created>1705319960541</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705319960541</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +229,7 @@
     <MESSAGE value="Implemented basic logic&#10;&#10;- Cyclic word list&#10;- Saving / loading word list using GSON&#10;- Basic statistics&#10;- Loading web image" />
     <MESSAGE value="Updated view and controller to use new logic&#10;&#10;- Basic functionality&#10;- Minor warning fixes" />
     <MESSAGE value="Minor refactoring to fix warnings&#10;&#10;- Made fonts local variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring to fix warnings&#10;&#10;- Made fonts local variables" />
+    <MESSAGE value="Added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments" />
   </component>
 </project>

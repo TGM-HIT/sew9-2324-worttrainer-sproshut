@@ -1,17 +1,18 @@
 package model;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import model.base.WTBaseIO;
 import model.exceptions.WTIOException;
 
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class WTInOut {
+public class WTInOut implements WTBaseIO {
     private static final String FILENAME = "worttrainer.json";  // Output file
-    private final WTList list;
+    private WTList list;
 
-    public WTInOut(WTList list) {
+    public void setWordList(WTList list) {
         this.list = list;
     }
 

@@ -1,5 +1,6 @@
 package model;
 
+import model.base.WTBaseIO;
 import model.exceptions.WTIOException;
 
 import javax.swing.*;
@@ -11,11 +12,12 @@ public class WTModel {
     private int correct;    // Stats
     private int asked;
     private final WTList entryList;
-    private final WTInOut inOut;
+    private final WTBaseIO inOut;
 
-    public WTModel() {
+    public WTModel(WTBaseIO inOut) {
         entryList = new WTList();
-        inOut = new WTInOut(entryList);
+        this.inOut = inOut;
+        this.inOut.setWordList(entryList);
         correct = 0;
         asked = 0;
     }

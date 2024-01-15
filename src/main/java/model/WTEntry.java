@@ -9,10 +9,12 @@ import java.net.URL;
 public class WTEntry {
     private String word;
     private String url;
+    private transient boolean isCorrect;
 
     public WTEntry(String word, String url) {
         setWord(word);
         setURL(url);
+        isCorrect = false;
     }
 
     /**
@@ -68,5 +70,20 @@ public class WTEntry {
     public void setWord(String word) {
         if(isWordInvalid(word)) throw new InvalidWordException("Empty word entered");
         this.word = word;
+    }
+
+    /**
+     * Already answered correctly
+     * @param b True if already answered correctly, false if not
+     */
+    public void setCorrect(boolean b) {
+        isCorrect = b;
+    }
+
+    /**
+     * Was this word already answered correctly?
+     */
+    public boolean isCorrect() {
+        return isCorrect;
     }
 }
