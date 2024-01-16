@@ -69,8 +69,24 @@ public class WTControl implements WindowListener, ActionListener {
                 }
                 model.increaseAsked();
                 view.setTotal(model.getAsked());
-                updateImage(model.nextEntry().getURL());
                 view.resetAnswer();
+                WTEntry nextEntry = model.nextEntry();
+                if (nextEntry != null) updateImage(nextEntry.getURL());
+                else {
+                    view.loadComplete(false);
+                    if (view.showRestartExitDialog()) {
+                        model.resetCorrectEntries();
+                        model.resetCorrect();
+                        model.resetTotal();
+                        view.setCorrect(0);
+                        view.setTotal(0);
+                        view.loadComplete(true);
+                        nextEntry = model.nextEntry();
+                        if (nextEntry != null) updateImage(nextEntry.getURL());
+                    } else {
+                        view.close();
+                    }
+                }
                 break;
         }
     }
@@ -110,7 +126,7 @@ public class WTControl implements WindowListener, ActionListener {
             return;
         }
         view.loadComplete(true);
-        WTEntry entry = model.nextEntry();
+        WTEntry entry = model.currentEntry();
         if (entry != null) updateImage(entry.getURL());
     }
 

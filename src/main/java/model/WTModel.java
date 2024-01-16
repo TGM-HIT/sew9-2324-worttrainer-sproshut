@@ -37,6 +37,13 @@ public class WTModel {
     }
 
     /**
+     * Reset correct entries
+     */
+    public void resetCorrectEntries() {
+        entryList.getEntryList().forEach(entry -> entry.setCorrect(false));
+    }
+
+    /**
      * Increase total asked
      */
     public void increaseAsked() {
@@ -44,10 +51,11 @@ public class WTModel {
     }
 
     /**
-     * Increase correct answers
+     * Increase total correct answers
      */
     public void increaseCorrect() {
         correct++;
+        if (entryList.currentEntry() != null) entryList.currentEntry().setCorrect(true);
     }
 
     /**
@@ -58,7 +66,7 @@ public class WTModel {
     }
 
     /**
-     * @return Correct answers
+     * @return Total correct answers
      */
     public int getCorrect() {
         return correct;
@@ -68,14 +76,28 @@ public class WTModel {
      * @param answer Answer to check if it matches with current word
      */
     public boolean checkAnswer(String answer) {
+        if (entryList.currentEntry() == null) return false;
         return entryList.currentEntry().getWord().equals(answer);
     }
 
     /**
-     * @return Next entry
+     * @return Next entry or null if empty or every entry is correctly answered
      */
     public WTEntry nextEntry() {
-        entryList.moveNext();
+        int answered;
+        for (answered = 0; answered < entryList.getEntryList().size(); answered++) {
+            entryList.moveNext();
+            if (entryList.currentEntry() == null) return null;
+            else if (entryList.currentEntry().isCorrect()) continue;
+            return entryList.currentEntry();
+        }
+        return null;    // If all entries answered correctly
+    }
+
+    /**
+     * @return Current entry
+     */
+    public WTEntry currentEntry() {
         return entryList.currentEntry();
     }
 

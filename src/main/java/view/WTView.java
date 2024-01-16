@@ -4,6 +4,7 @@ import controller.WTControl;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class WTView extends JPanel {
@@ -177,6 +178,15 @@ public class WTView extends JPanel {
     }
 
     /**
+     * Show restart/exit dialog
+     * @return Continue?
+     */
+    public boolean showRestartExitDialog() {
+        int option = JOptionPane.showConfirmDialog(null, "Wollen Sie das Spiel neustarten?", "Alle Wörter richtig!", JOptionPane.YES_NO_OPTION);
+        return option == JOptionPane.YES_OPTION;
+    }
+
+    /**
      * Enable/disable answer field
      */
     public void toggleInput() {
@@ -189,5 +199,13 @@ public class WTView extends JPanel {
      */
     public void setImage(Image image) {
         lImage.setIcon(image != null ? new ImageIcon(image) : null);
+    }
+
+    /**
+     * Close the app
+     */
+    public void close() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }
