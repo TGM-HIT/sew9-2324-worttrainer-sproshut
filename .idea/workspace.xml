@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Repeating only wrongly answered words">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Readme and build updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,12 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Worttrainer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -87,6 +92,8 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Worttrainer [:WTControl.main()].executor": "Run",
+    "Gradle.Worttrainer [build].executor": "Run",
+    "Gradle.Worttrainer [shadowJar].executor": "Run",
     "JAR Application.Worttrainer.main.jar.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -115,7 +122,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Worttrainer [build]">
+  <component name="RunManager" selected="Gradle.Worttrainer [shadowJar]">
     <configuration name="WTControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.WTControl" />
       <module name="Worttrainer.main" />
@@ -151,12 +158,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Worttrainer [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Worttrainer.main.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Worttrainer_main_jar/Worttrainer.main.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Worttrainer [shadowJar]" />
         <item itemvalue="Gradle.Worttrainer [build]" />
         <item itemvalue="JAR Application.Worttrainer.main.jar" />
         <item itemvalue="Application.WTControl" />
@@ -295,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705441415317</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Readme and build updated">
+      <option name="closed" value="true" />
+      <created>1705476929930</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705476929930</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,6 +363,7 @@
     <MESSAGE value="Added default word entries if none loaded" />
     <MESSAGE value="Added new word entry input dialog" />
     <MESSAGE value="Repeating only wrongly answered words" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repeating only wrongly answered words" />
+    <MESSAGE value="Readme and build updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme and build updated" />
   </component>
 </project>

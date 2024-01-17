@@ -10,6 +10,6 @@ Der Worttrainer ist für Volksschulkinder geeignet und soll deren Wortschatz auf
 ## Starten
 
 ```bash
-java -jar Worttrainer-1.0-SNAPSHOT.jar
+java -jar Worttrainer-1.0-SNAPSHOT-all.jar
 ```
 
