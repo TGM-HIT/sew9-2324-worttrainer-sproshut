@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Readme and build updated">
+    <list default="true" id="a1cbb516-dd43-4e98-b503-5b67f79e6848" name="Changes" comment="Bug fixes&#10;&#10;- Fixed crashing when word entry dialog closed&#10;- Fixed saving to and loading from TXT file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WTControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/WTInOutTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/WTInOutTXT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/WTView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WTView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,7 @@
     "Gradle.Worttrainer [:WTControl.main()].executor": "Run",
     "Gradle.Worttrainer [build].executor": "Run",
     "Gradle.Worttrainer [shadowJar].executor": "Run",
+    "JAR Application.Worttrainer-1.0-SNAPSHOT-all.jar.executor": "Run",
     "JAR Application.Worttrainer.main.jar.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -122,7 +124,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Worttrainer [shadowJar]">
+  <component name="RunManager" selected="JAR Application.Worttrainer-1.0-SNAPSHOT-all.jar">
     <configuration name="WTControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.WTControl" />
       <module name="Worttrainer.main" />
@@ -180,12 +182,17 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Worttrainer-1.0-SNAPSHOT-all.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/Worttrainer-1.0-SNAPSHOT-all.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="Worttrainer.main.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Worttrainer_main_jar/Worttrainer.main.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.Worttrainer-1.0-SNAPSHOT-all.jar" />
         <item itemvalue="Gradle.Worttrainer [shadowJar]" />
         <item itemvalue="Gradle.Worttrainer [build]" />
         <item itemvalue="JAR Application.Worttrainer.main.jar" />
@@ -333,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705476929930</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Another build fix">
+      <option name="closed" value="true" />
+      <created>1705478171544</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705478171544</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +379,8 @@
     <MESSAGE value="Added new word entry input dialog" />
     <MESSAGE value="Repeating only wrongly answered words" />
     <MESSAGE value="Readme and build updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme and build updated" />
+    <MESSAGE value="Another build fix" />
+    <MESSAGE value="Bug fixes&#10;&#10;- Fixed crashing when word entry dialog closed&#10;- Fixed saving to and loading from TXT file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes&#10;&#10;- Fixed crashing when word entry dialog closed&#10;- Fixed saving to and loading from TXT file" />
   </component>
 </project>

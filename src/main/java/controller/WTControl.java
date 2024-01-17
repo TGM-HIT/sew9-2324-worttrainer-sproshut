@@ -73,14 +73,14 @@ public class WTControl implements WindowListener, ActionListener {
                 WTEntry nextEntry = model.nextEntry();
                 if (nextEntry != null) updateImage(nextEntry.getURL());
                 else {
-                    view.loadComplete(false);
+                    view.toggleControls(false);
                     if (view.showRestartExitDialog()) {
                         model.resetCorrectEntries();
                         model.resetCorrect();
                         model.resetTotal();
                         view.setCorrect(0);
                         view.setTotal(0);
-                        view.loadComplete(true);
+                        view.toggleControls(true);
                         nextEntry = model.nextEntry();
                         if (nextEntry != null) updateImage(nextEntry.getURL());
                     } else {
@@ -98,15 +98,13 @@ public class WTControl implements WindowListener, ActionListener {
     private void updateImage(String url) {
         URL url_obj = model.getUrlObj(url);
         if (url_obj != null) {
-            view.toggleReset();
-            view.toggleInput();
+            view.toggleControls(false);
             view.setImage(null);
             Thread t = new Thread(() -> {   // Perform load and update in separate thread
                 Image img = model.getImage(url_obj);
                 SwingUtilities.invokeLater(() -> {
                     view.setImage(img);
-                    view.toggleInput();
-                    view.toggleReset();
+                    view.toggleControls(true);
                 });
             });
             t.start();
@@ -125,7 +123,7 @@ public class WTControl implements WindowListener, ActionListener {
             view.showError(e.getMessage());
             return;
         }
-        view.loadComplete(true);
+        view.toggleControls(true);
         WTEntry entry = model.currentEntry();
         if (entry != null) updateImage(entry.getURL());
     }

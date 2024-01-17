@@ -10,9 +10,9 @@ import java.util.ArrayList;
 public class WTView extends JPanel {
     private final JTextField answer;
     private final JLabel lImage, correct, total;
-    private final JButton resetCorrect, resetTotal, addEntry;
 
     public WTView(WTControl wtControl) {
+        JButton resetCorrect, resetTotal, addEntry;
         Font italic = new Font(Font.SANS_SERIF, Font.ITALIC, 16);
         Font bold = new Font(Font.SANS_SERIF, Font.BOLD, 16);
         Font normal = new Font(Font.SANS_SERIF, Font.PLAIN, 16);
@@ -93,16 +93,16 @@ public class WTView extends JPanel {
         addEntry.setFont(bold);
         this.add(addEntry, gbc);
 
-        loadComplete(false);
+        toggleControls(false);
     }
 
     /**
      * Enable/disable buttons and text fields when window loaded
-     * @param b Enable/disable
+     * @param enabled Enable/disable
      */
-    public void loadComplete(boolean b) {
+    public void toggleControls(boolean enabled) {
         for (Component cp : getComponents() ){
-            if (cp instanceof JButton || cp instanceof JTextField) cp.setEnabled(b);
+            if (cp instanceof JButton || cp instanceof JTextField) cp.setEnabled(enabled);
         }
     }
 
@@ -145,14 +145,6 @@ public class WTView extends JPanel {
     }
 
     /**
-     * Enable/disable score reset buttons
-     */
-    public void toggleReset() {
-        resetCorrect.setEnabled(!resetCorrect.isEnabled());
-        resetTotal.setEnabled(!resetTotal.isEnabled());
-    }
-
-    /**
      * Ask for a word and URL to add
      * @return Word and URL, or null if empty
      */
@@ -174,6 +166,7 @@ public class WTView extends JPanel {
                 result.add(url.getText());
             }
         }
+        else return null;   // Window closed
         return result;
     }
 
@@ -184,13 +177,6 @@ public class WTView extends JPanel {
     public boolean showRestartExitDialog() {
         int option = JOptionPane.showConfirmDialog(null, "Wollen Sie das Spiel neustarten?", "Alle Wörter richtig!", JOptionPane.YES_NO_OPTION);
         return option == JOptionPane.YES_OPTION;
-    }
-
-    /**
-     * Enable/disable answer field
-     */
-    public void toggleInput() {
-        answer.setEnabled(!answer.isEnabled());
     }
 
     /**

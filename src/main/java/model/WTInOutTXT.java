@@ -27,6 +27,8 @@ public class WTInOutTXT implements WTBaseIO {
 
     @Override
     public void loadWordList() throws WTIOException {
+        if (!new File(FILENAME).isFile()) return;
+
         try (BufferedReader in = new BufferedReader(new FileReader(FILENAME))) {
             String text; // Current read line
             String[] parts;  // Line split into parts
